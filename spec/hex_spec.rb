@@ -17,10 +17,10 @@ describe 'hex' do
   end
 
   it 'detects if a string is hex' do
-    'ecde18dbe76fbd0c33330f1c354871db'.hex?.should be_true
-    'dteffujehknhfjbrjnlnldnhcujvddbikngjrtgh'.modhex?.should be_true
+    expect('ecde18dbe76fbd0c33330f1c354871db'.hex?).to            eq true
+    expect('dteffujehknhfjbrjnlnldnhcujvddbikngjrtgh'.modhex?).to eq true
 
-    'foobar'.hex?.should be_false
-    'test'.modhex?.should be_false
+    expect('foobar'.hex?).to  eq false
+    expect('test'.modhex?).to eq false
   end
 end
